@@ -1,1 +1,28 @@
+name: environment
+
 services:
+
+  open-ldap:
+    image: osixia/openldap:latest
+    container_name: open-ldap
+    hostname: openldap
+    command: --copy-service
+    ports:
+      - 389:389
+      - 636:636
+    environment:
+      LDAP_ORGANISATION: organisation
+      LDAP_DOMAIN: organisation.com
+      LDAP_BASE_DN: ""
+      LDAP_ADMIN_USERNAME: admin
+      LDAP_ADMIN_PASSWORD: password
+
+  ldap-client:
+    image: osixia/phpldapadmin:latest
+    container_name: ldap-client
+    hostname: phpldapadmin
+    ports:
+      - 8082:80
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: openldap
+      PHPLDAPADMIN_HTTPS: false
