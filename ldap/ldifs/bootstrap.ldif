@@ -1,0 +1,18 @@
+DN: OU=users,DC=organization,DC=com
+OU: users
+objectClass: top
+objectClass: organizationalUnit
+
+
+
+DN: CN=john doe,OU=users,DC=organization,DC=com
+CN: john doe
+ObjectGUID: 5f68ad78-3b95-4b9a-a45f-483c25139a4d
+objectClass: user
+DisplayName: John Doe
+Name: John Doe
+GivenName: John
+SN: Doe
+mail: John.Doe@organization.com
+SamAccountName: John.Doe
+userPassword: {MD5}X03MO1qnZdYdgyfeuILPmQ==
