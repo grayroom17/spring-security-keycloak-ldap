@@ -11,11 +11,14 @@ services:
       - 389:389
       - 636:636
     environment:
-      LDAP_ORGANISATION: organisation
-      LDAP_DOMAIN: organisation.com
+      LDAP_ORGANISATION: organization
+      LDAP_DOMAIN: organization.com
       LDAP_BASE_DN: ""
       LDAP_ADMIN_USERNAME: admin
       LDAP_ADMIN_PASSWORD: password
+    volumes:
+      - ./ldap/organization.schema:/container/service/slapd/assets/config/bootstrap/schema/organization.schema
+      - ./ldap/ldifs:/container/service/slapd/assets/config/bootstrap/ldif/custom
 
   ldap-client:
     image: osixia/phpldapadmin:latest
