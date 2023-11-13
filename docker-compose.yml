@@ -41,3 +41,7 @@ services:
       KEYCLOAK_ADMIN_PASSWORD: password
     command:
       - start-dev
+      - --import-realm
+      - --features admin-fine-grained-authz
+    volumes:
+      - ./keycloak:/opt/keycloak/data/import

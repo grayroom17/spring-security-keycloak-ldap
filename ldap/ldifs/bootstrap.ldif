@@ -5,9 +5,9 @@ objectClass: organizationalUnit
 
 
 
-DN: CN=john doe,OU=users,DC=organization,DC=com
-CN: john doe
-ObjectGUID: 5f68ad78-3b95-4b9a-a45f-483c25139a4d
+DN: CN=John Doe,OU=users,DC=organization,DC=com
+CN: John Doe
+uid: 5f68ad78-3b95-4b9a-a45f-483c25139a4d
 objectClass: user
 DisplayName: John Doe
 Name: John Doe
